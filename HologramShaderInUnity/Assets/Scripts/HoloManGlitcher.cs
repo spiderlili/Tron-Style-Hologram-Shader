@@ -7,13 +7,13 @@ public class HoloManGlitcher : MonoBehaviour {
 
 	public float glitchChance = 0.1f;
 
-	private Renderer holoRenderer;
+	private SkinnedMeshRenderer holoRenderer;
 	private WaitForSeconds glitchLoopWait = new WaitForSeconds(.1f);
 	private WaitForSeconds glitchDuration = new WaitForSeconds(.1f);
 
 	void Awake()
 	{
-		holoRenderer = GetComponent<Renderer> ();
+		holoRenderer = GetComponent<SkinnedMeshRenderer> ();
 	}
 
     //turn start into a coroutine that is looping every 0.1 seconds - checks for a random number between 0 and 1

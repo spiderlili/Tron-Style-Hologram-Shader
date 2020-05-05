@@ -57,7 +57,7 @@
 			v2f vert (appdata v)
 			{
 				v2f o; //vert to frag returns struct from the vertex function and pass it into the fragment function
-				v.vertex.x += sin(_Time.y * _Speed + v.vertex.y * _Amplitude) * _Distance * _Amount;
+				v.vertex.y += sin(_Time.y * _Speed + v.vertex.y * _Amplitude) * _Distance * _Amount;
 				o.vertex = UnityObjectToClipPos(v.vertex); //the vertex in the model's local object space - convert to screen space coordinates useful for pixels on a flat screen
 				//taking the uv data from the model's main texture, transform the uv texture(offset and tiling)
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
